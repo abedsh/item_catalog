@@ -19,7 +19,7 @@ from flask import jsonify, flash, session as login_session, make_response
 
 
 CLIENT_ID = json.loads(
-    open('/var/www/itemCatalog/app/client_secrets.json', 'r').read())['web']['client_id']
+    open('client_secrets.json', 'r').read())['web']['client_id']
 
 
 @app.route('/')
