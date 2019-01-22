@@ -23,7 +23,7 @@ login_manager.init_app(app)
 
 Base = declarative_base()
 
-engine = create_engine('postgresql://catalog:catalog101@localhost/catalog')
+engine = create_engine('sqlite:///catalog.db')
 
 
 Base.metadata.create_all(engine)
@@ -44,5 +44,5 @@ from app import models, views
 # @app.route("/")
 # def hello():
 #    return "Hello, I love Digital Ocean!"
-if __name__ == "__main__":
-   app.run()
+# if __name__ == "__main__":
+#    app.run()
